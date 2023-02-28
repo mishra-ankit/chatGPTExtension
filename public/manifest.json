@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "ChatGPT for StackOverflow",
+  "name": "ChatGPT for Anything",
   "version": "0.3.0",
-  "description": "ChatGPT's response to every StackOverflow question",
+  "description": "Description",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -13,7 +13,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "ChatGPT for StackOverflow",
+    "default_title": "ChatGPT for Anything",
     "default_popup": "popup.html"
   },
   "host_permissions": ["https://*.openai.com/"],
