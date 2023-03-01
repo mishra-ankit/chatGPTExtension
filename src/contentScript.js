@@ -68,10 +68,10 @@ function handleSubmit() {
 
 function addInputForm() {
    const html = `
-      <input id="chatgpt-input" type="text"></input>
+      <input id="chatgpt-input" placeholder="Ask question here, ex. Explain the function XYZ" style="width: 50%" type="text"></input>
   `
   const button = document.createElement("button");
-  button.innerText = "Submit";
+  button.innerText = "Ask ChatGPT";
   button.addEventListener("click", handleSubmit);
 
    const elem = document.createElement("div");
