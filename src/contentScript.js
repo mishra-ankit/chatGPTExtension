@@ -87,6 +87,22 @@ function addInputForm() {
 }
 
 window.onload = () => {
+  init();
+}
+
+let previousUrl = location.href;
+const observer = new MutationObserver(function(mutations) {
+  if (location.href !== previousUrl) {
+      previousUrl = location.href;
+      console.log(`URL changed to ${location.href}`);
+      setTimeout(init, 1500);
+    }
+});
+
+const config = {subtree: true, childList: true};
+observer.observe(document, config);
+
+function init() {
   const isError = false;
   const g = document.querySelector("[data-target='readme-toc.content']");
   g.parentElement.insertBefore(addInputForm(), g);
