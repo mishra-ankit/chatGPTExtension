@@ -95,7 +95,7 @@ const observer = new MutationObserver(function(mutations) {
   if (location.href !== previousUrl) {
       previousUrl = location.href;
       console.log(`URL changed to ${location.href}`);
-      setTimeout(init, 2000);
+      setTimeout(init, 2000); // Delay to make it run after the new page DOM is present
     }
 });
 
