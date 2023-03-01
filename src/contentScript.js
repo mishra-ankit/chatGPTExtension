@@ -15,11 +15,12 @@ const port = chrome.runtime.connect({ name: "main-port" });
 
 const scrapeQuestion = () => {
   const inputText = document.getElementById("chatgpt-input").value;
+  const code = document.querySelector("table")?.innerText ?? document.getElementsByClassName("react-code-lines")[0]?.innerText;
 
   port.postMessage({
     key: "SCRAPED_QUESTION",
     value: {
-      questionText: inputText
+      questionText: inputText + "\n" + code
     }
   });
 
